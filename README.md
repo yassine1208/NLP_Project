@@ -1,53 +1,117 @@
-# Unsupervised Topic Modeling for Archives
+# Unsupervised Topic Modeling for Text Archives
 
-**Project 19 — ELHATTAB YASSINE**
+An end-to-end Natural Language Processing (NLP) pipeline and interactive web application comparing unsupervised topic modeling algorithms (**LDA** and **NMF**) on the **20 Newsgroups** text archive.
 
-This project studies the professor-recommended **20 Newsgroups** archive with two unsupervised topic-modeling algorithms: LDA and NMF. NMF is tested with both Bag of Words and TF-IDF representations.
+---
 
-## Run the complete project
+## Overview
 
-The complete six-stage pipeline is in [notebooks/Topic_Modeling_Pipeline.ipynb](notebooks/Topic_Modeling_Pipeline.ipynb). Open it in Jupyter or VS Code, select the project Python environment, and run the cells in order:
+This repository implements, evaluates, and compares three topic modeling configurations:
+- **LDA (Latent Dirichlet Allocation)** with Bag-of-Words (BoW)
+- **NMF (Non-Negative Matrix Factorization)** with Bag-of-Words (BoW)
+- **NMF (Non-Negative Matrix Factorization)** with TF-IDF
 
-1. Acquire the 20 Newsgroups corpus and keep evaluation labels separate.
-2. Clean, tokenize, lemmatize, and filter documents.
-3. Build BoW and TF-IDF matrices from training data.
-4. Train LDA-BoW, NMF-BoW, and NMF-TF-IDF.
-5. Evaluate coherence, diversity, and external category alignment; interpret the topics.
-6. Paste a new document and view its three highest-scoring topics under each model.
+The project includes the complete data preprocessing workflow, model training, quantitative evaluation (topic coherence, topic diversity, and external category alignment), topic interpretation analysis, and an interactive **Streamlit** dashboard for real-time document analysis.
 
-Install dependencies and the spaCy English model in the selected environment:
+---
+
+## Repository Structure
+
+```text
+├── app.py                                  # Streamlit web application
+├── notebooks/
+│   └── Topic_Modeling_Pipeline.ipynb       # Complete 6-stage end-to-end pipeline
+├── scripts/
+│   └── generate_presentation_assets.py    # Evaluation visualization & asset generator
+├── test_documents/                         # Sample raw text documents for smoke testing
+│   ├── 01_cryptography_encryption.txt
+│   ├── 02_space_exploration.txt
+│   └── 03_hockey_game.txt
+├── data/                                   # Data directory (corpus metadata & cached splits)
+│   ├── dataset_metadata.json
+│   └── dataset_metadata_ag_news.json
+├── artifacts/                              # Trained models, vectorizers, and metrics
+├── topic_interpretations.json              # Curated interpretations & labels for learned topics
+├── requirements.txt                        # Python dependencies
+└── README.md
+```
+
+---
+
+## Getting Started
+
+### 1. Prerequisites & Environment Setup
+
+Clone the repository and create an isolated virtual environment:
 
 ```powershell
-python -m pip install -r requirements.txt
+# Clone the repository
+git clone https://github.com/yassine1208/NLP_Project.git
+cd NLP_Project
+
+# Create and activate a virtual environment
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### 2. Install Dependencies
+
+Install the required packages and download the spaCy English language model:
+
+```powershell
+pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-Step 2 may take a few minutes. If interrupted, rerun that cell.
+---
 
-## Streamlit application
+## Pipeline Workflow
 
-After completing the notebook Steps 1–5, launch the interactive interface from the project folder:
+The complete end-to-end pipeline is structured in [notebooks/Topic_Modeling_Pipeline.ipynb](notebooks/Topic_Modeling_Pipeline.ipynb):
+
+1. **Corpus Acquisition & Splitting**:
+   - Uses the official 20 Newsgroups train/test split.
+   - Retains 17,902 documents after filtering (10,756 training, 7,146 held-out test).
+   - Category labels are isolated strictly for post-hoc external validation and never seen during unsupervised training.
+2. **Text Preprocessing & Cleaning**:
+   - Strips headers, footers, quotes, and non-alphanumeric noise.
+   - Tokenization, POS tagging, and lemmatization powered by `spaCy`.
+   - Frequency filtering (pruning extreme low- and high-frequency terms).
+3. **Feature Extraction**:
+   - Builds vocabulary-aligned Bag-of-Words (BoW) count matrices.
+   - Builds Term Frequency-Inverse Document Frequency (TF-IDF) weighted matrices.
+4. **Model Training**:
+   - Trains `LDA-BoW`, `NMF-BoW`, and `NMF-TF-IDF` with 20 topics each (60 topics total).
+5. **Quantitative & Qualitative Evaluation**:
+   - Measures topic coherence ($C_v$ / UMass), topic diversity, and external category alignment.
+   - Full human interpretations and descriptive labels documented in `topic_interpretations.json`.
+6. **Inference & Prediction**:
+   - Predicts dominant topic distributions on unseen text documents.
+
+---
+
+## Interactive Streamlit Application
+
+Launch the Streamlit web dashboard to interactively test documents and explore model comparisons:
 
 ```powershell
 streamlit run app.py
 ```
 
-The app lets you analyze pasted text or upload a `.txt` file, browse topic words and interpretations, and compare held-out performance. The evaluation view separates coherence, diversity, external category alignment, and training-time charts so their different scales are not conflated. It loads the saved models in `artifacts/` and uses the same cleaning and lemmatization rules as the notebook.
+### Application Features:
+- **Live Document Analyzer**: Paste custom raw text or upload `.txt` documents (such as samples from `test_documents/`) to inspect top predicted topics across all three models.
+- **Model Comparison View**: Compare coherence scores, vocabulary diversity, and training execution benchmarks side-by-side.
+- **Topic Explorer**: Inspect top representative keywords, weights, and curated topic labels for all 60 learned topics.
 
-## Presentation materials
+---
 
-- [PLAN_PRESENTATION_8_MINUTES.md](PLAN_PRESENTATION_8_MINUTES.md) follows the required seven-part, eight-minute presentation structure and includes the measured model scores, interpretation, caveats, and demo plan.
-- `presentation_assets/` contains six slide-ready SVG comparison charts and CSVs with overall and per-topic coherence scores.
-- Recreate the charts from the saved evaluation outputs with `python scripts/generate_presentation_assets.py`.
+## Data & Output Details
 
-## Data and outputs
+- **`data/`**: Stores raw and preprocessed corpus files, vocabulary caches, and metadata.
+- **`artifacts/`**: Stores fitted vectorizers, serialized models (`.joblib`), document-term sparse matrices (`.npz`), and computed evaluation metrics.
+- **`topic_interpretations.json`**: Contains human-reviewed labels, primary domains, and rationales for each of the 60 topics across the three models.
+- **`test_documents/`**: Provides smoke-test documents (Cryptography, Space Exploration, Hockey) to verify real-time inference without contaminating the held-out test set.
 
-The pipeline uses the official 20 Newsgroups train/test split. After acquisition filtering it contains 18,028 posts; preprocessing retains 17,902 documents, with 10,756 for training and 7,146 held out for evaluation. Category labels are kept separate and never used for fitting.
-
-- `data/` contains raw and processed corpora, metadata, and isolated labels.
-- `artifacts/` contains BoW/TF-IDF matrices, fitted vectorizers, three trained model configurations, evaluation metrics, and filtered terms.
-- `topic_interpretations.json` contains labels and rationales for all 60 learned topics.
-- `RAPPORT_EVALUATION.md` presents the evaluation and the ten most coherent topics from each model.
-- `test_documents/` contains three clear examples for qualitative inference checks.
-
-The example documents are smoke tests, not a substitute for held-out evaluation. LDA scores are topic probabilities; NMF scores are normalized activations and are not calibrated probabilities.
+> **Note on Model Output Interpretation**:
+> - LDA model scores represent true probability distributions over topics ($\sum p = 1.0$).
+> - NMF model scores represent non-negative activation weights normalized for comparative display, rather than calibrated Bayesian probabilities.
