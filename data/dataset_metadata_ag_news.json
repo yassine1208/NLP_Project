@@ -1,0 +1,26 @@
+{
+  "source": "AG News (fancyzhx/ag_news)",
+  "dataset_id": "fancyzhx/ag_news",
+  "acquired_at_utc": "2026-10-26T21:50:56.418176+00:00",
+  "dataset_library_version": "2.20.0",
+  "split_counts_before_filtering": {
+    "train": 120000,
+    "test": 7600
+  },
+  "sampling": "Official train/test rows reconstructed from the existing acquisition order; no sampling. Test documents and labels are held out from fitting.",
+  "total_documents_collected": 127600,
+  "avg_character_length": 236.28,
+  "structure": "Unstructured news title and lead paragraph strings",
+  "labels": "Stored separately; test labels are used only for external evaluation, never preprocessing or model fitting.",
+  "limitations": "Short news snippets can produce sparse word co-occurrence. The source has four broad editorial labels, so ten-topic models may identify subthemes.",
+  "split_counts_after_filtering": {
+    "train": 120000,
+    "test": 7600
+  },
+  "label_names": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ]
+}

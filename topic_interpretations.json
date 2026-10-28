@@ -1,0 +1,248 @@
+{
+  "LDA_BoW (Controlled & Practical)": {
+    "god, jesus, church, bible, christ, christian, life, believe, word, law": {
+      "label": "Christianity and religious life",
+      "rationale": "God, Jesus, church, Bible, Christ, and Christian beliefs are the dominant terms; law and life add broad discussion context."
+    },
+    "power, ground, wire, light, water, circuit, cable, hole, supply, tape": {
+      "label": "Electrical circuits and power systems",
+      "rationale": "Wire, circuit, current, light, and supply vocabulary points to electrical equipment and troubleshooting."
+    },
+    "god, believe, argument, evidence, atheist, exist, belief, claim, religion, true": {
+      "label": "Atheism and arguments about belief",
+      "rationale": "Atheist, evidence, existence, belief, and argument signal debate about religion and the existence of God."
+    },
+    "drive, card, disk, system, driver, need, monitor, video, hard, mac": {
+      "label": "Computer hardware and storage",
+      "rationale": "Drives, disks, cards, drivers, monitors, and video identify personal-computer hardware discussions."
+    },
+    "president, government, program, report, state, technology, national, child, administration, health": {
+      "label": "Government, public programs, and policy (mixed)",
+      "rationale": "President, government, state, and administration anchor a policy topic, while health and child indicate related public-affairs coverage."
+    },
+    "car, bike, engine, buy, ride, drive, road, speed, mile, tire": {
+      "label": "Cars, motorcycles, and vehicle maintenance",
+      "rationale": "Cars, bikes, engines, roads, tires, and mileage describe vehicle ownership and use."
+    },
+    "company, apr, pay, month, trial, logo, organization, test, advertising, million": {
+      "label": "Company and commercial information (mixed)",
+      "rationale": "Company, payment, trial, logo, and advertising terms suggest business notices, though the topic is not tightly focused."
+    },
+    "space, launch, system, datum, nasa, information, satellite, include, university, research": {
+      "label": "Space exploration and NASA research",
+      "rationale": "Space, launch, NASA, satellites, and research identify aerospace and space-science discussion; information-system terms are secondary noise."
+    },
+    "scsi, max, bit, fast, university, mode, ide, mac, cost, book": {
+      "label": "Computer interfaces and hardware (mixed)",
+      "rationale": "SCSI, IDE, bit, mode, and Mac suggest hardware; university, cost, and book make this topic less specific."
+    },
+    "armenian, turkish, war, government, kill, turkey, nazi, muslim, greek, turk": {
+      "label": "Armenian and Turkish history and conflict",
+      "rationale": "Armenian, Turkish, Turkey, Greek, war, and genocide-related vocabulary identify historical and political conflict."
+    },
+    "san, period, chicago, york, los, city, angeles, los angeles, drug, pittsburgh": {
+      "label": "US cities and local references (mixed)",
+      "rationale": "San Francisco, Chicago, New York, Los Angeles, and Pittsburgh are place names. The remaining terms are broad and do not establish one narrow subject, so this topic is best treated as a mixed collection of location-related posts."
+    },
+    "patient, disease, food, cause, medical, doctor, pain, eat, treatment, msg": {
+      "label": "Medicine, health, and nutrition",
+      "rationale": "Patient, disease, medical care, doctors, pain, and treatment form the core health theme; food, eating, and MSG add a nutrition-related thread."
+    },
+    "israel, right, israeli, arab, state, jews, attack, kill, country, land": {
+      "label": "Israel and the Israeli–Palestinian conflict",
+      "rationale": "Israel, Israeli, Arab, Jewish, land, state, and attack indicate discussion of Israel and the surrounding political conflict."
+    },
+    "home, copy, happen, cover, woman, start, live, hear, dog, black": {
+      "label": "Everyday life and personal stories (weakly focused)",
+      "rationale": "Home, woman, live, hear, and dog suggest personal or domestic narratives, but the terms do not form a sharply defined subject."
+    },
+    "key, gun, law, chip, encryption, right, public, government, clipper, system": {
+      "label": "Encryption policy and firearms law (mixed)",
+      "rationale": "Key, chip, encryption, and Clipper point to cryptography policy; gun, law, and right introduce a separate firearms-policy theme."
+    },
+    "window, program, file, display, line, run, set, entry, application, output": {
+      "label": "Windowed software and program use",
+      "rationale": "Window, program, file, display, application, and output point to operating software and graphical user-interface discussions."
+    },
+    "point, long, probably, group, read, idea, actually, course, little, bad": {
+      "label": "General discussion and argument (weakly focused)",
+      "rationale": "The terms are mostly conversational rather than domain-specific, suggesting broad discussion or argument without a distinct subject."
+    },
+    "file, image, available, version, ftp, program, window, edu, software, graphic": {
+      "label": "Digital images and graphics software",
+      "rationale": "Image, graphic, file, FTP, version, and software describe digital graphics and exchanging image files."
+    },
+    "game, team, play, win, player, season, hockey, league, run, score": {
+      "label": "Team sports, especially hockey",
+      "rationale": "Game, team, player, season, league, and score are sports terms; hockey provides the clearest specific sport."
+    },
+    "win, excellent, icon, mask, miss, condition, david, zip, cica, camera": {
+      "label": "Digital photography and image utilities (weakly focused)",
+      "rationale": "Icon, mask, ZIP, CICA, and camera suggest image or software utilities, but several terms are ambiguous and the topic is only loosely focused."
+    }
+  },
+  "NMF_BoW (Controlled)": {
+    "file, available, version, ftp, image, edu, software, program, include, graphic": {
+      "label": "Software files and graphics exchange",
+      "rationale": "Files, FTP, versions, image formats, and graphics describe software and digital-file sharing."
+    },
+    "gun, law, right, state, crime, weapon, firearm, file, control, police": {
+      "label": "Firearms, law, and gun policy",
+      "rationale": "Gun, firearm, weapon, law, crime, and police terms center on firearms and regulation."
+    },
+    "president, job, money, government, support, pay, program, talk, business, clinton": {
+      "label": "US politics, government, and economics (mixed)",
+      "rationale": "Presidential and government terms combine with jobs, money, business, and support, making this a broad public-affairs topic."
+    },
+    "bad, right, car, little, long, maybe, big, probably, bike, let": {
+      "label": "General discussion with vehicle overlap (weakly focused)",
+      "rationale": "Most terms are generic conversational language; car and bike appear but do not form a sufficiently distinctive subject."
+    },
+    "drive, disk, scsi, hard, system, controller, floppy, tape, ide, bio": {
+      "label": "Computer drives and storage hardware",
+      "rationale": "Drive, disk, SCSI, controller, floppy, tape, and IDE are specific to computer storage and interfaces."
+    },
+    "window, file, program, run, set, application, display, entry, widget, error": {
+      "label": "Window systems and graphical software",
+      "rationale": "Window, application, display, widget, and program identify graphical-interface software and troubleshooting."
+    },
+    "game, team, play, win, player, season, league, hockey, period, goal": {
+      "label": "Team sports, especially hockey (baseball overlap)",
+      "rationale": "Game, team, player, season, and league are shared sports terms; hockey, period, and goal point more strongly to hockey, while the model also groups baseball posts here."
+    },
+    "information, group, internet, news, article, computer, newsgroup, service, message, net": {
+      "label": "Internet and newsgroup communication",
+      "rationale": "Newsgroups, messages, articles, internet services, and networks describe online communication infrastructure."
+    },
+    "power, car, ground, wire, engine, light, water, circuit, current, need": {
+      "label": "Electrical systems and vehicle troubleshooting (mixed)",
+      "rationale": "Power, wiring, current, and circuits form an electrical theme, with car and engine terms showing overlap with vehicle discussions."
+    },
+    "space, launch, nasa, satellite, earth, orbit, mission, system, shuttle, technology": {
+      "label": "Spaceflight, satellites, and NASA missions",
+      "rationale": "NASA, launch, satellite, orbit, mission, shuttle, and Earth give this topic a clear space-exploration focus."
+    },
+    "god, jesus, love, book, christ, life, bible, write, john, sin": {
+      "label": "Christianity, scripture, and religious life",
+      "rationale": "God, Jesus, Christ, Bible, sin, and John identify Christian scripture and belief; love and life are common religious discussion terms."
+    },
+    "god, believe, claim, religion, exist, point, argument, true, church, christian": {
+      "label": "Arguments about belief and religion",
+      "rationale": "Belief, existence, claims, arguments, and religion indicate debate about faith and the existence of God."
+    },
+    "kill, happen, woman, start, home, child, fire, live, hear, armenian": {
+      "label": "Violence and personal events (mixed)",
+      "rationale": "Kill and fire suggest violent events, while woman, child, home, and live suggest personal reports. Armenian adds a possible historical-conflict thread, so this topic is mixed."
+    },
+    "sell, offer, price, max, black, sale, cover, soon, include, book": {
+      "label": "Classified listings and items for sale",
+      "rationale": "Sell, offer, price, and sale are characteristic of marketplace posts; book and cover suggest items being listed."
+    },
+    "card, mac, bit, monitor, driver, video, memory, machine, apple, chip": {
+      "label": "Computer hardware and display devices",
+      "rationale": "Card, monitor, video driver, memory, machine, Apple, and chip identify computer hardware and graphics equipment."
+    },
+    "datum, line, model, image, point, bit, level, value, object, code": {
+      "label": "Computer graphics and data representation (broad)",
+      "rationale": "Image, model, object, point, and value suggest graphics or technical data representation, though the terms are broad and the topic is not tightly focused."
+    },
+    "israel, war, israeli, arab, jews, state, right, land, attack, country": {
+      "label": "Israel and Middle East political conflict",
+      "rationale": "Israel, Israeli, Arab, Jewish, land, war, and attack identify discussion of Israel and Middle East conflict."
+    },
+    "study, drug, cause, disease, health, medical, food, patient, doctor, report": {
+      "label": "Medicine, disease, and health research",
+      "rationale": "Study, disease, health, medical, patient, and doctor indicate medical research and health-related discussion."
+    },
+    "key, chip, encryption, clipper, government, system, security, phone, bit, public": {
+      "label": "Cryptography, computer security, and privacy policy",
+      "rationale": "Key, encryption, Clipper, security, phone, and government point to cryptography and debates about secure communications."
+    },
+    "armenian, turkish, muslim, nazi, greek, turkey, turk, history, government, genocide": {
+      "label": "Armenian, Turkish, and regional history",
+      "rationale": "Armenian, Turkish, Greek, Turkey, history, and genocide identify historical and political discussion of ethnic conflict in the region."
+    }
+  },
+  "NMF_TFIDF (Practical)": {
+    "point, reason, case, claim, argument, mind, fact, talk, person, wrong": {
+      "label": "Reasoning and argumentation",
+      "rationale": "Reason, claim, argument, fact, and wrong describe discussion centered on opinions and evidence rather than a narrow domain."
+    },
+    "window, program, run, application, server, software, display, user, code, motif": {
+      "label": "Window software and application development",
+      "rationale": "Window systems, applications, servers, display, code, and Motif identify software and graphical-interface development."
+    },
+    "game, team, play, player, win, season, fan, hockey, league, baseball": {
+      "label": "Team sports (baseball and hockey grouped together)",
+      "rationale": "Game, team, player, season, and league are common sports language; baseball and hockey both appear, so this model does not fully distinguish the two sports."
+    },
+    "drive, disk, hard, scsi, controller, floppy, ide, hard drive, rom, boot": {
+      "label": "Computer storage and drive hardware",
+      "rationale": "Hard drives, disks, SCSI, IDE, controllers, and boot media identify storage hardware and configuration."
+    },
+    "key, chip, encryption, clipper, government, algorithm, phone, public, nsa, system": {
+      "label": "Cryptography, encryption, and privacy policy",
+      "rationale": "Encryption, keys, Clipper, algorithms, NSA, and public systems indicate cryptography and privacy debates."
+    },
+    "soon, food, bank, doctor, disease, pain, msg, patient, brain, eat": {
+      "label": "Health, symptoms, and medical advice",
+      "rationale": "Doctors, disease, pain, patients, brain, and food point to medical and health discussions; a few terms are unrelated noise."
+    },
+    "god, jesus, christian, believe, bible, religion, church, belief, faith, christ": {
+      "label": "Christian belief and religious practice",
+      "rationale": "God, Jesus, Christian, Bible, church, faith, and Christ form a coherent religious topic."
+    },
+    "card, monitor, driver, video, board, apple, mode, color, ram, buy": {
+      "label": "Computer graphics cards and display hardware",
+      "rationale": "Cards, monitors, video drivers, boards, display modes, color, and RAM describe computer hardware."
+    },
+    "israel, kill, law, right, state, government, gun, country, weapon, war": {
+      "label": "Politics, conflict, and firearms (mixed)",
+      "rationale": "Israel, war, and government combine with gun, weapon, and law vocabulary, so this topic spans political conflict and firearms."
+    },
+    "car, engine, mile, yeah, owner, road, dealer, auto, oil, drive": {
+      "label": "Automobiles, ownership, and maintenance",
+      "rationale": "Car, engine, mileage, owner, road, dealer, oil, and drive point to vehicle ownership and maintenance."
+    },
+    "file, ftp, site, picture, format, edu, directory, faq, convert, program": {
+      "label": "Digital files, image formats, and FTP sites",
+      "rationale": "File, FTP, picture, format, directory, and convert describe sharing and converting digital files, especially images."
+    },
+    "sell, price, offer, sale, interested, pay, condition, include, buy, box": {
+      "label": "Marketplace listings and sales",
+      "rationale": "Sell, price, offer, sale, interested, and buy indicate classified advertisements and transactions."
+    },
+    "armenian, woman, greek, turkish, burn, dead, plane, turkey, german, body": {
+      "label": "Ethnic conflict and violent events (mixed)",
+      "rationale": "Armenian, Greek, Turkish, and Turkey indicate regional ethnic conflict; burn, dead, plane, and body suggest reports of violent events."
+    },
+    "bike, stuff, ride, delete, head, dod, motorcycle, little, turn, right": {
+      "label": "Motorcycles and riding",
+      "rationale": "Bike, ride, and motorcycle are the strongest terms, with additional broad conversational language."
+    },
+    "information, university, internet, school, fax, service, april, date, research, computer": {
+      "label": "University and Internet information services",
+      "rationale": "University, Internet, service, research, and computer point to academic and online information resources; date and fax suggest directory-style posts."
+    },
+    "speed, fast, rate, mhz, gun, system, slow, memory, run, datum": {
+      "label": "Computer performance and hardware speed (mixed)",
+      "rationale": "Speed, rate, MHz, memory, and system suggest computer performance; gun is an unrelated term that makes this topic mixed."
+    },
+    "space, money, cost, air, launch, spend, nasa, water, earth, station": {
+      "label": "Space missions, NASA, and project costs",
+      "rationale": "Space, launch, NASA, Earth, and station identify space exploration; money, cost, and spend suggest mission funding."
+    },
+    "hear, read, article, group, answer, number, modem, week, ago, response": {
+      "label": "Newsgroup discussion and replies",
+      "rationale": "Article, group, answer, and response indicate online discussion threads; modem and week appear as supporting context."
+    },
+    "power, bill, current, line, supply, need, job, signal, ground, output": {
+      "label": "Electrical power and utility systems",
+      "rationale": "Power, current, line, supply, signal, ground, and output are electrical engineering and utility terms."
+    },
+    "value, printer, font, image, print, define, text, character, object, objective": {
+      "label": "Typography, fonts, and printing",
+      "rationale": "Printer, font, print, text, and character identify typography and computer printing; image and object add graphics context."
+    }
+  }
+}

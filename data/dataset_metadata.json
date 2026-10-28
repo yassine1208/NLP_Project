@@ -1,0 +1,45 @@
+{
+  "source": "20 Newsgroups (official post-level train/test split)",
+  "dataset_id": "sklearn/20newsgroups",
+  "acquired_at_utc": "2026-10-28T00:20:06.174474+00:00",
+  "scikit_learn_version": "1.5.0",
+  "sampling": "Official train/test posts; headers, footers, and quoted text removed. One post is one document.",
+  "split_counts_before_filtering": {
+    "train": 11314,
+    "test": 7532
+  },
+  "split_counts_after_filtering": {
+    "train": 10834,
+    "test": 7194
+  },
+  "total_documents_collected": 18028,
+  "minimum_documents_required": 50000,
+  "requirement_met": false,
+  "exploratory_under_minimum": true,
+  "label_names": [
+    "alt.atheism",
+    "comp.graphics",
+    "comp.os.ms-windows.misc",
+    "comp.sys.ibm.pc.hardware",
+    "comp.sys.mac.hardware",
+    "comp.windows.x",
+    "misc.forsale",
+    "rec.autos",
+    "rec.motorcycles",
+    "rec.sport.baseball",
+    "rec.sport.hockey",
+    "sci.crypt",
+    "sci.electronics",
+    "sci.med",
+    "sci.space",
+    "soc.religion.christian",
+    "talk.politics.guns",
+    "talk.politics.mideast",
+    "talk.politics.misc",
+    "talk.religion.misc"
+  ],
+  "avg_character_length": 1220.12,
+  "structure": "Unstructured newsgroup posts with headers, footers, and quoted passages removed",
+  "labels": "Stored separately at isolated_labels_for_evaluation.parquet; test labels are used only for external evaluation, never preprocessing or model fitting.",
+  "limitations": "The official corpus contains 20 newsgroups; some posts may remain closely related or share author/thread context."
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+data/*.parquet
+data/sklearn_cache/
+artifacts/*.joblib
+artifacts/*.npz
+artifacts/*.json
+artifacts/*.csv
